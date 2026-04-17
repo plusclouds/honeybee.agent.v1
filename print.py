@@ -148,8 +148,9 @@ def preview_receipt(orders: list) -> None:
 
 
 def print_receipt(orders: list) -> None:
+    preview_receipt(orders)
+
     if not WINDOWS:
-        preview_receipt(orders)
         return
 
     payload = build_receipt(orders)
